@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue.js</title>
+</head>
+<body>
+    <div id="app">
+        <input type="text" v-model="taskText"/>
+        <input type="button" value="Dodaj zadanie" @click="addTask"/>
+
+        <div>
+            <div v-for="task, index in tasks">
+                {{ task }}
+                <input type="button" value="x" @click="deleteTask(index)" />
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="./script.js"></script>
+</body>
+</html>
